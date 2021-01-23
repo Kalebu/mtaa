@@ -2,10 +2,10 @@ from distutils.core import setup
 
 setup(
     name="mtaa",
-    version="1.0",
+    version="1.1",
     description="A package consisting of all Tanzania locations from region to streets in a easy accessible way",
     url="https://github.com/Kalebu/mtaa",
-    download_url="https://github.com/Kalebu/mtaa/archive/1.0.tar.gz",
+    download_url="https://github.com/Kalebu/mtaa/archive/1.1.tar.gz",
     author="Jordan Kalebu",
     author_email="isaackeinstein@gmail.com",
     license="MIT",
