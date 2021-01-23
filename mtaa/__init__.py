@@ -11,8 +11,8 @@ class Tanzania(object):
     # ========================================================
     # ======== RECURSIVE CONSTRUCTOR TO CREATE ===============
     # ========    LOCATION OBJECTS WE NEED     ===============
-    # #======================================================
-    #
+    # ========================================================
+
     def __init__(self, **raw_data: Dict) -> None:
         for key, value in raw_data.items():
             if isinstance(value, dict):
@@ -64,4 +64,5 @@ def create_mtaa(json_path: Union[str, Path]) -> Tanzania:
 
 
 if __name__ != "__main__":
-    Tanzania = create_mtaa("tanzania.json")
+    json_path = os.path.join(os.getcwd(), "mtaa", "tanzania.json")
+    Tanzania = create_mtaa(json_path)
