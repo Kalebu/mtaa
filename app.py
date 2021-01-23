@@ -1,6 +1,5 @@
 import os
 import json
-import pkgutil
 from pathlib import Path
 from dataclasses import dataclass
 from typing import Dict, Union
@@ -47,7 +46,6 @@ class Tanzania(object):
         json_object = json_object if json_object else self.get_dict()
         data_tree = {}
         for key, value in json_object.items():
-            print(value)
             if isinstance(value, Tanzania):
                 data_tree[key] = self.tree(value.__dict__)
             else:
@@ -66,5 +64,4 @@ def create_mtaa(json_path: Union[str, Path]) -> Tanzania:
 
 
 if __name__ != "__main__":
-    json_path = os.path.dirname(__file__) + "/tanzania.py"
-    tanzania = create_mtaa(json_path)
+    Tanzania = create_mtaa("tanzania.json")
