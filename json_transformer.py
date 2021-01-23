@@ -20,12 +20,21 @@ class JsonTransformer(object):
 
         self.regions_path = regions_path
 
+    # ===================================================
+    # =========== LOAD ALL LOCATION CSV FILES ===========
+    # ===================================================
+
     def load_csv_names(self) -> Iterable:
         return (
             csv_file
             for csv_file in os.listdir(self.regions_path)
             if csv_file.endswith(".csv")
         )
+
+    # ===================================================
+    # ========= TRANSFORM LIST OF LOCATION ==============
+    # =========       TO JSON              ===============
+    # ====================================================
 
     def csv_to_json(self, csv_reader) -> Dict:
         try:
@@ -44,6 +53,14 @@ class JsonTransformer(object):
                     street,
                     place,
                 ) = record_row
+
+                region, district, ward, street, place, = (
+                    region.capitalize(),
+                    district.capitalize(),
+                    ward.capitalize(),
+                    street.capitalize(),
+                    place.capitalize(),
+                )
 
                 if index == 0:
                     payload = {
@@ -98,9 +115,13 @@ class JsonTransformer(object):
                         street
                     ].append(place)
             return payload
-        except Exception as bug:
-            print(bug)
+        except Exception as error:
+            print(error)
             sys.exit()
+
+    # ================================================================
+    # ================  LOAD A REGION CSV AS JSON ====================
+    # ================================================================
 
     def region_as_json(self, region_name: Union[str, Path]) -> Dict:
         try:
@@ -111,6 +132,30 @@ class JsonTransformer(object):
                     header = next(reader)
                     processed_json = self.csv_to_json(reader)
                     return processed_json
-        except Exception as bug:
+        except TypeError as bug:
             print(bug)
             sys.exit()
+
+    # ==========================================================
+    # ========== METHODS FOR LOADING TANZANIA ==================
+    # ==========    LOCATIONS AS JSON ==========================
+    # ==========================================================
+
+    def tanzania_as_json(self) -> Dict:
+        try:
+            regions = self.load_csv_names()
+            tanzania = {}
+            for region in regions:
+                region_name = region[:-4].capitalize()
+                tanzania[region_name] = self.region_as_json(region)[region_name]
+            return tanzania
+        except TypeError as error:
+            print(error)
+            sys.exit()
+
+
+if __name__ == "__main__":
+    transformer = JsonTransformer("locations")
+    with open("tanzania.json", "w") as nchi:
+        country_json = transformer.tanzania_as_json()
+        json.dump(country_json, nchi)
