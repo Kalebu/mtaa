@@ -1,13 +1,18 @@
 import os
 import json
-from os.path import join
 from pathlib import Path
 from dataclasses import dataclass
-from typing import List, Dict, Union
+from typing import Dict, Union
 
 
 @dataclass
 class Tanzania(object):
+
+    # ========================================================
+    # ======== RECURSIVE CONSTRUCTOR TO CREATE ===============
+    # ========    LOCATION OBJECTS WE NEED     ===============
+    # #======================================================
+    #
     def __init__(self, **raw_data: Dict) -> None:
         for key, value in raw_data.items():
             if isinstance(value, dict):
@@ -15,12 +20,27 @@ class Tanzania(object):
             else:
                 self.__dict__[key] = value
 
+    # =====================================================
+    # ========= METHOD TO BUILD REPRENTATION ==============
+    # =========       STRING                 ==============
+    # =====================================================
+
     def __repr__(self) -> str:
         items = list(self.__dict__.keys())
         return f"{items}"
 
+    # ====================================================
+    # =========== METHOD TO GET A LOCATION ===============
+    # ===========         LEVEL           ================
+    # ====================================================
+
     def get_dict(self):
         return self.__dict__
+
+    # ====================================================
+    # ======== METHOD TO BUILD A LOCATION ================
+    # ========        TREE               =================
+    # ====================================================
 
     def tree(self, json_object=None) -> Dict:
         json_object = json_object if json_object else self.get_dict()
@@ -31,6 +51,11 @@ class Tanzania(object):
             else:
                 data_tree[key] = value
         return data_tree
+
+
+# ========================================================
+# =========== FUNCTION TO CREATE TZ OBJECT ===============
+# ========================================================
 
 
 def create_mtaa(json_path: Union[str, Path]) -> Tanzania:
