@@ -47,7 +47,6 @@ class Tanzania(object):
         json_object = json_object if json_object else self.get_dict()
         data_tree = {}
         for key, value in json_object.items():
-            print(value)
             if isinstance(value, Tanzania):
                 data_tree[key] = self.tree(value.__dict__)
             else:
