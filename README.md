@@ -1,6 +1,15 @@
 # mtaa
 A package consisting of all Tanzania locations from region to streets in a easy accessible way
 
+Intro
+-------
+Mtaa package is result of organized **json** of all the locations in Tanzania, As I was looking for data about these locations data I came across repo [tanzania-location-db](https://github.com/HackEAC/tanzania-locations-db), It consists of locations data organized into *regions*, whereby each region has its own csv file. So I wrote a script to transform all the locations from csv into a single **Json** and from there package came.
+
+Json Transformer
+------------------
+
+If you wanna give a look at the script or interested about building your Json from a similar kind of raw data here is [Json Transformer script](https://github.com/Kalebu/mtaa/blob/main/json_transformer.py). 
+
 
 Installation 
 ------------------
@@ -8,7 +17,9 @@ Installation
 Use pip to install it just as shown below 
 
 ```bash
--> pip install mtaa
+
+pip install mtaa
+
 ```
 
 Usage 
@@ -59,6 +70,7 @@ we can fix it as soon as possible(ASAP) or just reach me directly through my [em
 
 
 Pull Requests
+------------------
 If you have something to add I welcome pull requests on improvement , you're helpful contribution will be merged as soon as possible
 
 Credits
@@ -67,5 +79,5 @@ All the credits to [kalebu](github.com/kalebu)
 
 Disclaimer !!!
 ------------
-All the location I used to build this repository, I got from an public repository titled [Tanzania](https://github.com/HackEAC/tanzania-locations-db), 
-I'm not responsible for any kind of misinformation in it, I tried to locate my home with it found its pretty accurate but not 100%, so use it to your own risk
+All the location I used to build this repository, I got from an public repository titled [tanzania-locations-db](https://github.com/HackEAC/tanzania-locations-db), 
+I'm not responsible for any kind of misinformation in it, I tried to locate my home with it found its pretty accurate, so use it to your own risk
