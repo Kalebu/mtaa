@@ -33,7 +33,7 @@ The library is very straight forward, at the very top of the library is country 
 ['Shinyanga', 'Mara', 'Dar-es-salaam', 'Kilimanjaro', 'Kagera', 'Tanga', 'Mwanza', 'Tabora', 'Kigoma', 'Pwani', 'Ruvuma', 'Mtwara', 'Morogoro', 'Rukwa', 'Katavi', 'Simiyu', 'Geita', 'Arusha', 'Iringa', 'Mbeya', 'Njombe', 'Manyara', 'Lindi', 'Singida', 'Songwe', 'Dodoma']
 
 >>> tanzania.Mbeya.districts
-['Mbeya cbd', 'Mbeya', 'Rungwe', 'Mbarali', 'Kyela', 'Chunya
+['Mbeya cbd', 'Mbeya', 'Rungwe', 'Mbarali', 'Kyela', 'Chunya]
  
  
 >>> tanzania.Mbeya.districts.Rungwe.wards
@@ -54,6 +54,13 @@ Here an example (Some places in Tanzania)
 
 ```
 
+From other languages ?
+---------------------
+
+Incase you're from other languages than Python you might wanna take a look at an [MtaaAPI](https://github.com/HackEAC/mtaaAPI) developed by [HackEAC](https://github.com/HackEAC). 
+
+
+
  Give it a star 
  ---------------
 
@@ -73,9 +80,13 @@ Pull Requests
 ------------------
 If you have something to add I welcome pull requests on improvement , you're helpful contribution will be merged as soon as possible
 
+
 Credits
 ------------
-All the credits to [kalebu](github.com/kalebu)
+All the credits to 
+- [kalebu](github.com/kalebu)
+- [HackEAC](https://github.com/HackEAC/tanzania-locations-db)
+
 
 Disclaimer !!!
 ------------
