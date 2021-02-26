@@ -1,4 +1,9 @@
-# mtaa
+# [mtaa](https://pypi.org/project/mtaa)
+
+[![Downloads](https://pepy.tech/badge/mtaa)](https://pepy.tech/project/mtaa)
+[![Downloads](https://pepy.tech/badge/mtaa/month)](https://pepy.tech/project/mtaa)
+[![Downloads](https://pepy.tech/badge/mtaa/week)](https://pepy.tech/project/mtaa)
+
 A package consisting of all Tanzania locations from region to streets in a easy accessible way
 
 Intro
