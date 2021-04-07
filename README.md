@@ -4,7 +4,10 @@
 [![Downloads](https://pepy.tech/badge/mtaa/month)](https://pepy.tech/project/mtaa)
 [![Downloads](https://pepy.tech/badge/mtaa/week)](https://pepy.tech/project/mtaa)
 
-A package consisting of all Tanzania locations from region to streets in a easy accessible way
+A package consisting of all Tanzania locations from region to streets in a easy accessible way made by [kalebu](https://github.com/kalebu)
+
+<a href="https://www.buymeacoffee.com/kalebuj" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>
+
 
 Intro
 -------
