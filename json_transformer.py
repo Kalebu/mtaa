@@ -1,7 +1,6 @@
 # =================================================================
 # ========== SCRIPT TO TRANSFORM LOCATION CSV TO JSON =============
 # =================================================================
-
 import os
 import csv
 import sys
@@ -54,6 +53,7 @@ class JsonTransformer(object):
                     place,
                 ) = record_row
 
+                region, r_pcode,
                 region, district, ward, street, place, = (
                     region.capitalize(),
                     district.capitalize(),
@@ -147,7 +147,8 @@ class JsonTransformer(object):
             tanzania = {}
             for region in regions:
                 region_name = region[:-4].capitalize()
-                tanzania[region_name] = self.region_as_json(region)[region_name]
+                tanzania[region_name] = self.region_as_json(region)[
+                    region_name]
             return tanzania
         except TypeError as error:
             print(error)
