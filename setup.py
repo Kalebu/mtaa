@@ -10,12 +10,12 @@ with open(path.join(this_directory, 'description.md'), encoding='utf-8') as f:
 
 setup(
     name="mtaa",
-    version="1.2",
+    version="1.3",
     description="A package consisting of all Tanzania locations from region to streets in a easy accessible way",
     long_description=long_description,
     long_description_content_type='text/markdown',
     url="https://github.com/Kalebu/mtaa",
-    download_url="https://github.com/Kalebu/mtaa/archive/1.1.tar.gz",
+    download_url="https://github.com/Kalebu/mtaa/archive/1.3.tar.gz",
     author="Jordan Kalebu",
     author_email="isaackeinstein@gmail.com",
     license="MIT",
