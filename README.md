@@ -8,30 +8,25 @@ A package consisting of all Tanzania locations from region to streets in a easy 
 
 [![Become a patron](pictures/become_a_patron_button.png)](https://www.patreon.com/kalebujordan)
 
-Intro
--------
+## A strory behind
+
 Mtaa package is result of organized **json** of all the locations in Tanzania, As I was looking for data about these locations data I came across repo [tanzania-location-db](https://github.com/HackEAC/tanzania-locations-db), It consists of locations data organized into *regions*, whereby each region has its own csv file. So I wrote a script to transform all the locations from csv into a single **Json** and from there package came.
 
-Json Transformer
-------------------
+## Json Transformer
 
 If you wanna give a look at the script or interested about building your Json from a similar kind of raw data here is [Json Transformer script](https://github.com/Kalebu/mtaa/blob/main/json_transformer.py). 
 
+## Installation
 
-Installation 
-------------------
-
-Use pip to install it just as shown below 
+Use pip to install it just as shown below;
 
 ```bash
-
 pip install mtaa
-
 ```
 
-Usage 
------------
-The library is very straight forward, at the very top of the library is country which is tanzania and at the very bottoms are places in a given street, here is a sample
+## Usage 
+
+The library is very straight forward, at the very top of the library is country which is tanzania and at the very bottoms are places in a given street, here is a sample;
 
 ```python
 >>> from mtaa import tanzania
@@ -48,9 +43,29 @@ The library is very straight forward, at the very top of the library is country 
 
 ```
 
-Fetching the whole tree
--------------------------
-Lets you want to extract no just names in a ward but the whole ward and its deeper roots, to do this use the tree method at any given instance with exception of places in streets which are just list 
+## How about Dar-es-salaam ?
+
+In the above example we were able to retreive locations of **Mbeya** region because, Mbeya is a valid python identifier, when you try to access **Dar-es-Salaam** it will ofcourse raise you an error just as shown below;
+
+```python
+>>> from mtaa import tanzania
+>>> tanzania.Dar-es-salaam
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'Tanzania' object has no attribute 'Dar'
+```
+
+To resolve this at anypoint where you a location name is an invalid identifier, use get_dict() instead of (.) operator to access it as shown in the example below;
+
+```python
+>>> from mtaa import tanzania 
+>>> tanzania.get_dict()['Dar-es-salaam'].districts
+['Ilala cbd', 'Ilala', 'Kinondoni', 'Temeke', 'Ubungo', 'Kigamboni']
+```
+
+## Fetching the whole tree
+
+Lets you want to extract no just names in a ward but the whole ward and its deeper roots, to do this use the tree () at any given instance with exception of places in streets which are just list;
 
 Here an example (Some places in Tanzania)
 
@@ -61,41 +76,31 @@ Here an example (Some places in Tanzania)
 
 ```
 
-From other languages ?
----------------------
+## From other languages ?
 
 Incase you're from other languages than Python you might wanna take a look at an [MtaaAPI](https://github.com/HackEAC/mtaaAPI) developed by [HackEAC](https://github.com/HackEAC). 
 
+## Give it a star
 
+If you found this repository useful, give it a star so as the whole galaxy of developer can get to know it, you can also keep in touch with me on [twitter](https://twitter.com/j_kalebu).
 
- Give it a star 
- ---------------
-
-If you found this repository useful, give it a star 
-
-You can also keep in touch with me on [Twitter](https://twitter.com/j_kalebu).
-
-
-Bug bounty?
------------------
+## Bug bounty?
 
 If you encounter **issue** with the usage of the package, feel free raise an **issue** so as 
-we can fix it as soon as possible(ASAP) or just reach me directly through my [email](isaackeinstein@gmail.com)
+we can fix it as soon as possible(ASAP) or just reach me directly through email isaackeinstein(at)gmail.com.
 
+## Pull Requests
 
-Pull Requests
-------------------
 If you have something to add I welcome pull requests on improvement , you're helpful contribution will be merged as soon as possible
 
+## Disclaimer
 
-Credits
-------------
-All the credits to 
+All the location I used to build this repository, I got from an public repository titled [tanzania-locations-db](https://github.com/HackEAC/tanzania-locations-db), I'm not responsible for any kind of misinformation in it, I tried to locate my home with it found its pretty accurate, so use it to your own risk
+
+## Credits
+
+All the credits to ;
+
 - [kalebu](github.com/kalebu)
 - [HackEAC](https://github.com/HackEAC/tanzania-locations-db)
-
-
-Disclaimer !!!
-------------
-All the location I used to build this repository, I got from an public repository titled [tanzania-locations-db](https://github.com/HackEAC/tanzania-locations-db), 
-I'm not responsible for any kind of misinformation in it, I tried to locate my home with it found its pretty accurate, so use it to your own risk
+- Future contributors
