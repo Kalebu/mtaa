@@ -1,0 +1,8 @@
+README.md
+setup.py
+mtaa/__init__.py
+mtaa/tanzania.py
+mtaa.egg-info/PKG-INFO
+mtaa.egg-info/SOURCES.txt
+mtaa.egg-info/dependency_links.txt
+mtaa.egg-info/top_level.txt
