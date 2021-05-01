@@ -104,3 +104,11 @@ All the credits to ;
 - [kalebu](github.com/kalebu)
 - [HackEAC](https://github.com/HackEAC/tanzania-locations-db)
 - Future contributors
+
+## Related Opensource Projects
+
+- [MtaaAPI](https://github.com/HackEAC/mtaaAPI) developed by [HackEAC](https://github.com/HackEAC)
+- [Reverse geocoder](https://github.com/Kalebu/reverse-geocoder)
+- [rgeocode](https://github.com/bentesha/rgeocode))
+- [tanzaniageodata](https://github.com/Kijacode/tanzaniageodata)
+- [location-demographia](https://github.com/dbrax/location-demographia)
