@@ -107,8 +107,9 @@ All the credits to ;
 
 ## Related Opensource Projects
 
-- [MtaaAPI](https://github.com/HackEAC/mtaaAPI) developed by [HackEAC](https://github.com/HackEAC)
+- [MtaaAPI](https://github.com/HackEAC/mtaaAPI)
+- [rgeocode](https://github.com/bentesha/rgeocode)
 - [Reverse geocoder](https://github.com/Kalebu/reverse-geocoder)
-- [rgeocode](https://github.com/bentesha/rgeocode))
 - [tanzaniageodata](https://github.com/Kijacode/tanzaniageodata)
 - [location-demographia](https://github.com/dbrax/location-demographia)
+
