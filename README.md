@@ -54,6 +54,8 @@ The library is very straight forward, at the very top of the library is country 
 As you can see the repr() being shown on of the REPL is of type <mtaa.Tanzania>, you can easily convert it into native python datatypes due to the fact its iteratable, as shown in the example below;
 
 ```python
+>>> from mtaa import tanzania
+>>> list(tanzania)
 ['Shinyanga', 'Mara', 'Dar-es-salaam', 'Kilimanjaro', 'Kagera', 'Tanga', 'Mwanza', 'Tabora', 'Kigoma', 'Pwani', 'Ruvuma', 'Mtwara', 'Morogoro', 'Rukwa', 'Katavi', 'Simiyu', 'Geita', 'Arusha', 'Iringa', 'Mbeya', 'Njombe', 'Manyara', 'Lindi', 'Singida', 'Songwe', 'Dodoma']
 ```
 
