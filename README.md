@@ -43,6 +43,34 @@ The library is very straight forward, at the very top of the library is country 
 
 ```
 
+## How about the Type?
+
+```python
+>>> from mtaa import tanzania
+>>> type(tanzania)
+<class 'mtaa.Tanzania'>
+```
+
+As you can see the repr() being shown on of the REPL is of type <mtaa.Tanzania>, you can easily convert it into native python datatypes due to the fact its iteratable, as shown in the example below;
+
+```python
+['Shinyanga', 'Mara', 'Dar-es-salaam', 'Kilimanjaro', 'Kagera', 'Tanga', 'Mwanza', 'Tabora', 'Kigoma', 'Pwani', 'Ruvuma', 'Mtwara', 'Morogoro', 'Rukwa', 'Katavi', 'Simiyu', 'Geita', 'Arusha', 'Iringa', 'Mbeya', 'Njombe', 'Manyara', 'Lindi', 'Singida', 'Songwe', 'Dodoma']
+```
+
+Since its Iterable that's means you can loop through it, but as string for  Example;
+
+```python
+>>> for district in tanzania.Mbeya.districts:
+...     print(district)
+... 
+Mbeya cbd
+Mbeya
+Rungwe
+Mbarali
+Kyela
+Chunya
+```
+
 ## How about Dar-es-salaam ?
 
 In the above example we were able to retreive locations of **Mbeya** region because, Mbeya is a valid python identifier, when you try to access **Dar-es-Salaam** it will ofcourse raise you an error just as shown below;
@@ -59,7 +87,7 @@ To resolve this at anypoint where you a location name is an invalid identifier, 
 
 ```python
 >>> from mtaa import tanzania 
->>> tanzania.get_dict()['Dar-es-salaam'].districts
+>>> tanzania.get('Dar-es-salaam').districts
 ['Ilala cbd', 'Ilala', 'Kinondoni', 'Temeke', 'Ubungo', 'Kigamboni']
 ```
 
@@ -76,9 +104,32 @@ Here an example (Some places in Tanzania)
 
 ```
 
+## Grouped Locations
+
+You can also access grouped locations such as all districts, wards and street as shown below;
+
+```python
+>>> import mtaa
+>>> mtaa.wards
+......
+>>> len(mtaa.wards)
+3964
+>>> mtaa.districts
+......
+>>> len(mtaa.districts)
+158
+>>>mtaa.streets
+.....
+>>> len(mtaa.streets)
+16741
+```
+
 ## From other languages ?
 
-Incase you're from other languages than Python you might wanna take a look at an [MtaaAPI](https://github.com/HackEAC/mtaaAPI) developed by [HackEAC](https://github.com/HackEAC). 
+Incase you're from other languages than Python you might wanna take a look at these general purpose APIS
+
+- [MtaaAPI](https://github.com/HackEAC/mtaaAPI)
+- [Location-api](https://github.com/HackEAC/locations-API)
 
 ## Give it a star
 
@@ -108,8 +159,8 @@ All the credits to ;
 ## Related Opensource Projects
 
 - [MtaaAPI](https://github.com/HackEAC/mtaaAPI)
+- [Location-API](https://github.com/HackEAC/locations-API)
 - [rgeocode](https://github.com/bentesha/rgeocode)
 - [Reverse geocoder](https://github.com/Kalebu/reverse-geocoder)
 - [tanzaniageodata](https://github.com/Kijacode/tanzaniageodata)
 - [location-demographia](https://github.com/dbrax/location-demographia)
-

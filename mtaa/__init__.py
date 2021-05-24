@@ -72,9 +72,17 @@ def create_mtaa(json_path: Union[str, Path]) -> Tanzania:
     return Tanzania(**tanzania_as_json)
 
 
+# ====================================================
+# ======== FUNCTION TO GET POST CODE  ================
+# ====================================================
+
 def get_postcode(payload, l_level):
     return getattr(payload, l_level, "")
 
+
+# ====================================================
+# ======== FUNCTION TO GROUPED LOCATIONS  ============
+# ====================================================
 
 def get_all(country, level):
     all_districts = []
@@ -117,9 +125,10 @@ def get_all(country, level):
         return all_streets
 
 
-json_path = os.path.dirname(__file__) + "/tanzania_json.py"
-tanzania = create_mtaa(json_path)
-regions = get_all(tanzania, 'regions')
-districts = get_all(tanzania, 'districts')
-wards = get_all(tanzania, 'wards')
-streets = get_all(tanzania, 'streets')
+if __name__ != '__main__':
+    json_path = os.path.dirname(__file__) + "/tanzania_json.py"
+    tanzania = create_mtaa(json_path)
+    regions = get_all(tanzania, 'regions')
+    districts = get_all(tanzania, 'districts')
+    wards = get_all(tanzania, 'wards')
+    streets = get_all(tanzania, 'streets')
