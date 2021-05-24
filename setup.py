@@ -4,13 +4,13 @@ from setuptools import setup
 # read the contents of your description file
 
 this_directory = path.abspath(path.dirname(__file__))
-with open(path.join(this_directory, 'description.md'), encoding='utf-8') as f:
+with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
     long_description = f.read()
 
 
 setup(
     name="mtaa",
-    version="1.3",
+    version="1.4",
     description="A package consisting of all Tanzania locations from region to streets in a easy accessible way",
     long_description=long_description,
     long_description_content_type='text/markdown',

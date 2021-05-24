@@ -2,7 +2,7 @@ import os
 import json
 from pathlib import Path
 from dataclasses import dataclass
-from typing import Dict, Union
+from typing import Dict, Union, Iterator
 
 
 @dataclass
@@ -29,10 +29,24 @@ class Tanzania(object):
         items = list(self.__dict__.keys())
         return f"{items}"
 
+    # =====================================================
+    # ======       METHOD THAN RETURNS A ==================
+    # ======            ITERATOR       ====================
+    # =====================================================
+
+    def __iter__(self) -> Iterator:
+        return iter(self.__dict__.keys())
+
     # ====================================================
     # =========== METHOD TO GET A LOCATION ===============
     # ===========         LEVEL           ================
     # ====================================================
+
+    def get(self, location_level: str):
+        if not isinstance(location_level, str):
+            raise TypeError(
+                f'{location_level} must be of type<str> not {type(location_level)}')
+        return self.__dict__.get(location_level, None)
 
     def get_dict(self):
         return self.__dict__
